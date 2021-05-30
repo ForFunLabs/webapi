@@ -4,13 +4,14 @@ webapi
 ### User Matches
 `https://elevenvr.club/api/v1/accounts/385684/matches`
 
-parameter | type | example 
------------- | ------------- | -------
-page | object | `{page: {number: 1, size: 25} }` 
+parameter | type | default | description
+------------ | ------------- | ------- | -------
+page | object | `{page: {number: 1, size: 25} }` | matches per page, max 100
+unranked | object | false | include unranked matches in results
 
 `https://elevenvr.club/api/v1/accounts/385684/matches?page%5Bnumber%5D=1&page%5Bsize%5D=1`
 
-###### Example Output
+### Expected Output (Match)
 ```json
 {
     "data": [
@@ -31,27 +32,23 @@ page | object | `{page: {number: 1, size: 25} }`
                 "away-elo-avg": 3240,
                 "rounds": [
                     {
-                        "id": 19612600,
+                        "id": "19612600",
                         "away-score": 11,
                         "home-score": 6,
-                        "round-number": 0,
-                        "state": 0,
                         "winner": 1,
                         "created-at": "2021-05-28T18:35:17.863Z"
                     },
                     {
-                        "id": 19612412,
+                        "id": "19612412",
                         "away-score": 11,
                         "home-score": 8,
-                        "round-number": 0,
-                        "state": 0,
                         "winner": 1,
                         "created-at": "2021-05-28T18:32:47.679Z"
                     }
                 ],
                 "players": [
                     {
-                        "id": 385684,
+                        "id": "385684",
                         "username": "BLANK",
                         "elo": 3240,
                         "rank": 195,
@@ -62,7 +59,7 @@ page | object | `{page: {number: 1, size: 25} }`
                         "current-elo": 3254.2
                     },
                     {
-                        "id": 11111,
+                        "id": "11111",
                         "username": "PERSON",
                         "elo": 3130,
                         "rank": 89,
@@ -85,3 +82,17 @@ page | object | `{page: {number: 1, size: 25} }`
     }
 }
 ```
+#### Match State
+
+value | name
+------------ | -------------
+< 0 | Pending State 
+0 | In Progress
+1 | Completed
+2 | Cancelled
+
+#### Team
+value | name
+------------ | -------------
+0 | Home
+1 | Away
