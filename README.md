@@ -36,7 +36,7 @@ page | object | `{page: {number: 1, size: 25} }`
                         "home-score": 6,
                         "round-number": 0,
                         "state": 0,
-                        "winning-team": -1,
+                        "winner": 1,
                         "created-at": "2021-05-28T18:35:17.863Z"
                     },
                     {
@@ -45,7 +45,7 @@ page | object | `{page: {number: 1, size: 25} }`
                         "home-score": 8,
                         "round-number": 0,
                         "state": 0,
-                        "winning-team": -1,
+                        "winner": 1,
                         "created-at": "2021-05-28T18:32:47.679Z"
                     }
                 ],
