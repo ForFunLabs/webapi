@@ -24,7 +24,7 @@ page | object | `{page: {number: 1, size: 25} }`
                 "winning-team": 1,
                 "losing-team": 0,
                 "home-score": 0,
-                "away-score": 0,
+                "away-score": 2,
                 "created-at": "2021-05-28T18:32:47.679Z",
                 "elo-change": 6,
                 "home-elo-avg": 3130,
