@@ -1,5 +1,14 @@
 ## Endpoints
 
+
+### Matches
+`https://elevenvr.club/api/v1/matches`
+
+parameter | type | default | description
+------------ | ------------- | ------- | -------
+page | object | `{page: {number: 1, size: 25} }` | matches per page, max 100
+unranked | object | false | include unranked matches in results
+
 ### User Matches
 `https://elevenvr.club/api/v1/accounts/<account_id>/matches`
 
