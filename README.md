@@ -92,16 +92,20 @@ unranked | object | false | include unranked matches in results
 ```
 #### Match State
 
-value | name
------------- | -------------
+value | description
+---- | -------------
 < 0 | Pending State 
 0 | In Progress
 1 | Completed
 2 | Cancelled
+3 | Expired
+4 | PendingCompletion
+5 | Reverted
+6 | Reversed
 
 #### Team
-value | name
------------- | -------------
+value | description
+--- | -------------
 0 | Home
 1 | Away
 
